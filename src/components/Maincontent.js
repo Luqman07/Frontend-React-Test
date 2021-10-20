@@ -4,20 +4,24 @@ import { Switch, Route } from "react-router";
 import Verify from "../components/Verify"
 import Social from "../components/Social";
 import Business from "../components/Business";
+import { useState } from "react";
 
 const Maincontent = () => {
+    const [isCheckOne, setIsCheckOne] = useState(false)
+    const [isCheckTwo, setIsCheckTwo] = useState(false)
+    const [isCheckThree, setIsCheckThree] = useState(false)
     return ( 
         <Content>
-            <Navbar/>
+            <Navbar isCheckOne={isCheckOne} isCheckTwo={isCheckTwo} isCheckThree={isCheckThree}/>
             <Switch>
                 <Route path="/" exact>
-                    <Verify/>
+                    <Verify setIsCheckOne={setIsCheckOne}/>
                 </Route>
                 <Route path="/social">
-                    <Social/>
+                    <Social setIsCheckTwo={setIsCheckTwo}/>
                 </Route>
                 <Route path="/business">
-                    <Business/>
+                    <Business setIsCheckThree={setIsCheckThree}/>
                 </Route>
             </Switch>
         </Content>

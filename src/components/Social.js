@@ -1,4 +1,12 @@
-const Social = () => {
+import {useHistory} from "react-router-dom"
+
+const Social = ({setIsCheckTwo}) => {
+    const history = useHistory()
+    const handleClick = () => {
+        setIsCheckTwo(true)
+        history.push("/business");
+    }
+
     return (
         <div className="social">
             <p className="step">Step 2/3</p>
@@ -26,7 +34,7 @@ const Social = () => {
                     </div>
                 </div>
                 <div className="continue-btn">
-                    <button>Confirm Social Handles</button>
+                    <button onClick={handleClick}>Confirm Social Handles</button>
                 </div>
             </form>
             

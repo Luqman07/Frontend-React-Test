@@ -31,7 +31,7 @@
 }
 .verify .select-method{
     @include text-font(#141737);
-    padding: 1rem 0 0 0;
+    padding: 2rem 0 0 0;
 }
 
 
@@ -118,9 +118,13 @@
             padding-left: 1.9rem;
         }
         ul{
-            padding-left: 2.9rem;
+            padding-left: 1.9rem;
+            list-style: none;
             li{
                 padding: .3rem 0;
+                span{
+                    margin-right: 1rem;
+                }
             }
         }
         .bvn-footer{

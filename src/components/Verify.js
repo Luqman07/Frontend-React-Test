@@ -1,9 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-const Verify = () => {
+import {useHistory} from "react-router-dom"
+
+const Verify = ({setIsCheckOne}) => {
     const [isSelected, setIsSelected] = useState(true)
     const [isShowing, setIsShowing] = useState(false)
+    const history = useHistory()
     const handleAcctNumberToggle = () => {
         setIsSelected(false)
     }
@@ -12,6 +15,10 @@ const Verify = () => {
     }
     const handleHide = () => {
         setIsShowing(!isShowing)
+    }
+    const handleClick = () => {
+        setIsCheckOne(true)
+        history.push("/social");
     }
     return (
         <div className="verify">
@@ -43,9 +50,9 @@ const Verify = () => {
                     <div className={isShowing ? "bvn-access-info" : 'd-none'}>
                         <p>We only need access to your:</p>
                         <ul>
-                            <li>Full Name</li>
-                            <li>Phone Number</li>
-                            <li>Date of Birth</li>
+                            <li><span style={{color: 'green'}}>&#10003;</span>Full Name</li>
+                            <li><span style={{color: 'green'}}>&#10003;</span>Phone Number</li>
+                            <li><span style={{color: 'green'}}>&#10003;</span>Date of Birth</li>
                         </ul>
                         <div className="bvn-footer">
                             <p>Your BVN does not give us access to your bank accounts or transactions</p>
@@ -76,7 +83,7 @@ const Verify = () => {
             
             
             <div className="continue-btn">
-                <button>Complete</button>
+                <button onClick={handleClick}>Continue</button>
             </div>
         </div>
     );
