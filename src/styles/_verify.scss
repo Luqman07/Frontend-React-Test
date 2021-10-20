@@ -1,0 +1,145 @@
+@mixin text-font($color) {
+    font-size: 13px;
+    color: $color
+}
+@mixin input-field() {
+    border: 1px solid #E9EEF4;
+    outline: none;
+    border-radius: 7px;
+    width: 100%;
+    height: 2.5rem;
+    font-size: .9rem;
+    padding: 0 1rem;
+}
+.btn-border-blue{
+    border: 1.5px solid #006AFF;
+    background-color: #F5F6FA;
+    color: #141737;
+    outline: none;
+    padding: .65rem 1rem;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-right: .8rem;
+    font-weight: 500;
+}
+.d-none{
+    display: none;
+}
+.verify .step{
+    @include text-font(#A5B4CB);
+    padding: 2rem 0 1rem 0;
+}
+.verify .select-method{
+    @include text-font(#141737);
+    padding: 1rem 0 0 0;
+}
+
+
+.verify .btn{
+    background-color: #F5F6FA;
+    color: #141737;
+    border: 1px solid transparent;
+    outline: none;
+    padding: .65rem 1rem;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-right: .8rem;
+    font-weight: 500;
+}
+.bvn-container{
+    margin-top: 1.5rem;
+    label{
+        @include text-font(#141737);
+    }
+    .input-container{
+        input{
+            @include input-field()
+        }
+    }
+}
+.display-info{
+    background: #E9EEF4;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    .display-description{
+        display: flex;
+        justify-content: space-between;
+        .lock-container{
+            .lock{
+                margin-right: 1rem;
+                color: #006AFF;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 500;
+
+            }
+        } 
+        .show-container{
+            cursor: pointer;
+            .arrow-down{
+                margin-left: .6rem;
+                font-size: 9px;
+                color: #006AFF;
+                font-weight: 400;
+            }
+            p{
+                color: #006AFF;
+                font-size: 9px;
+                font-weight: 400;
+            }
+        } 
+        .lock-container, .show-container{
+            display: flex;
+            height: 1.5rem;
+            align-items: center;
+        }
+    }
+    .bvn-access-info{
+        font-size: 11px;
+        color: #141737;
+        font-weight: 400;
+        p{
+            margin: .4rem 0;
+            padding-left: 1.9rem;
+        }
+        ul{
+            padding-left: 2.9rem;
+            li{
+                padding: .3rem 0;
+            }
+        }
+        .bvn-footer{
+            margin-top: 1rem;
+            font-size: 11px;
+            color: #141737;
+            font-weight: 400;
+            p{
+                padding: .7rem 0;
+                margin: 1rem 1.9rem 0 1.9rem ;
+                border-top: 1px solid #ccd9ec;
+            }
+        }
+    }
+    
+}
+.verify .continue-btn{
+    display: flex;
+    justify-content: right;
+    margin-top: 2rem;
+    padding: 1rem 0 0 0;
+    border-top: 1px solid #E9EEF4;
+    button{
+        background: #006AFF;
+        color: #fff;
+        padding: 1rem 2.4rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 0;
+    }
+}
+
+
+
