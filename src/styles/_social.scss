@@ -1,0 +1,53 @@
+.social .step{
+    @include text-font(#A5B4CB);
+    padding: 2rem 0 1rem 0;
+}
+.social .select-method{
+    @include text-font(#7D8DA7);
+}
+form{
+    margin-top: 1.5rem;
+    label{
+        @include text-font(#141737);
+    }
+    .input-container{
+        input{
+            @include input-field();
+            width: 45%;
+        }
+    }
+    .d-flex-con2{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        .ig-div{
+            width: 45%;
+            .input-container-flex input{
+                @include input-field();
+            }
+        }
+        .twitter-div{
+            width: 45%;
+            .input-container-flex input{
+                @include input-field();
+            }
+        }
+    }
+    .continue-btn{
+        display: flex;
+        justify-content: right;
+        margin-top: 2rem;
+        padding: 1rem 0 0 0;
+        border-top: 1px solid #E9EEF4;
+        button{
+            background: #006AFF;
+            color: #fff;
+            padding: 1rem 2.4rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-right: 0;
+        }
+    }
+}
