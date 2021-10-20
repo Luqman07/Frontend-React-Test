@@ -48,11 +48,24 @@
 }
 .bvn-container{
     margin-top: 1.5rem;
+    .d-flex-con{
+        display: flex;
+        justify-content: space-between;
+        .account-number-div{
+            width:45%
+        }
+        .select-bank-div{
+            width:45%
+        }
+    }
     label{
         @include text-font(#141737);
     }
     .input-container{
         input{
+            @include input-field()
+        }
+        select{
             @include input-field()
         }
     }

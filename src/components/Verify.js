@@ -19,7 +19,7 @@ const Verify = () => {
             <h1>Verify Account</h1>
             <div>
                 <p className="select-method">Select a verification method</p>
-                <button onClick={handleBvnToggle} className={isSelected ? 'btn-border-blue': 'btn'}>BVN</button>
+                <button onClick={handleBvnToggle} className={isSelected ? 'btn-border-blue' : 'btn'}>BVN</button>
                 <button onClick={handleAcctNumberToggle} className={isSelected ? 'btn' : 'btn-border-blue'}>Personal Account Number</button>
             </div>
             <div className="bvn-container">
@@ -28,14 +28,26 @@ const Verify = () => {
                     <div className="input-container">
                         <input type="number" name="BVN" />
                     </div>
-                </div>) : 
-                (<div>
-                    <label htmlFor="">Personal Account Number</label>
-                    <div className="input-container">
-                        <input type="number" name="BVN" />
+                </div>) :
+                    (<div className="d-flex-con">
+                        <div className="account-number-div">
+                            <label htmlFor="">Account Number</label>
+                            <div className="input-container">
+                                <input type="number" name="Acct-no" />
+                            </div>
+                        </div>
+                        <div className="select-bank-div">
+                            <label htmlFor="">Select Bank</label>
+                            <div className="input-container">
+                                <select name="" id="">
+                                    <option value=""></option>
+                                    <option value="Gtbank">Guaranty Bank</option>
+                                    <option value="Accessbank">Access Bank</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                )}
+                    )}
             </div>
             <div className="display-info">
                 <div className="display-description">
@@ -60,10 +72,10 @@ const Verify = () => {
                     </div>
                 </div>
             </div>
-           {isShowing ? ( 
-            <div className="continue-btn">
-                <button>Complete</button>
-            </div>): ''}
+            {isShowing ? (
+                <div className="continue-btn">
+                    <button>Complete</button>
+                </div>) : ''}
         </div>
     );
 }
