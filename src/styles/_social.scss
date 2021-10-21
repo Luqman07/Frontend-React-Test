@@ -51,3 +51,20 @@ form{
         }
     }
 }
+@media screen and (max-width: 425px) {
+   form{
+    .input-container input{
+        width: 100%;     
+    }
+    .d-flex-con2{
+        width: 100%;
+        flex-direction: column;
+        .ig-div{
+            margin-bottom: 1rem;
+        }
+        .ig-div , .twitter-div{
+            width: 100%;
+        }
+    }
+   }
+}

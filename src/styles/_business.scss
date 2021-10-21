@@ -59,3 +59,14 @@
         }
     }
 }
+
+@media screen and(max-width: 425px) {
+    form{
+        .d-flex-con3{
+            flex-direction: column;
+            .business-category, .business-type{
+                width: 100% !important;
+            }
+        }
+    }
+}

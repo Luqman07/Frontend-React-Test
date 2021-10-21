@@ -62,3 +62,27 @@ nav ul .navlink{
 @import '_verify';
 @import '_social';
 @import '_business';
+
+
+@media screen and (max-width: 768px) {
+    nav{
+        border-bottom: 0;
+        ul li button{
+            margin-right: .2rem;
+        }
+        ul li .text{
+            font-size: 15px;
+        }
+    } 
+}
+@media screen and (max-width: 425px) {
+    .logout{
+        display: none;
+    }
+    nav{
+        border-bottom: 0;
+        ul li .text{
+            display: none;
+        }
+    } 
+}
