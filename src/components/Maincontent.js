@@ -15,7 +15,7 @@ const Maincontent = () => {
         <Content>
             <Navbar isCheckOne={isCheckOne} isCheckTwo={isCheckTwo} isCheckThree={isCheckThree}/>
             <Switch>
-                <Route path="/Frontend-React-Test" exact>
+                <Route path="/" exact>
                     <Verify setIsCheckOne={setIsCheckOne}/>
                 </Route>
                 <Route path="/social">
