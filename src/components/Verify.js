@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 const Verify = ({setIsCheckOne}) => {
     const [isSelected, setIsSelected] = useState(true)
