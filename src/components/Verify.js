@@ -90,3 +90,4 @@ const Verify = ({setIsCheckOne}) => {
 }
 
 export default Verify;
+
