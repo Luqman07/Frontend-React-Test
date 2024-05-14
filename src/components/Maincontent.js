@@ -1,10 +1,5 @@
 import styled from "styled-components";
 import Navbar from "./Navbar";
-import { Switch, Route } from "react-router";
-import Verify from "../components/Verify"
-import Social from "../components/Social";
-import Business from "../components/Business";
-import { useState } from "react";
 import {device} from "../util"
 
 const Maincontent = ({children, isCheckOne, isCheckTwo, isCheckThree}) => {
